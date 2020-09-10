@@ -13,5 +13,6 @@ COPY --from=builder /go/bin/squid-exporter /usr/local/bin/squid-exporter
 COPY --from=builder /etc/nsswitch.conf /etc/nsswitch.conf
 
 EXPOSE 9301
+VOLUME /usr/local/bin/squid-exporter
 
 ENTRYPOINT ["/usr/local/bin/squid-exporter"]
